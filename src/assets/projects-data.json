@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Kradan Kanban",
+    "fullDescription": "This project involved developing secure and scalable RESTful APIs using Java Spring Boot to support business functionalities within a microservices architecture. It included designing and managing relational databases with MySQL, ensuring data integrity, and handling connections to both private and public databases. For authentication, robust mechanisms were integrated using Spring Security, with Argon2PasswordEncoder for secure password hashing, and session tokens and JWTs for data protection. Deployment utilized Docker for containerization on Linux Ubuntu servers, with Nginx configured as a reverse proxy to optimize performance. Automated build and deployment processes minimized downtime and improved efficiency. Frontend-backend validation was implemented in collaboration with the frontend team, using Vue.js to maintain a consistent user experience.",
+    "shortDescription": "Kradan Kanban is a project management application that utilizes the Kanban methodology to help users visualize and manage their tasks and workflows effectively.",
+    "technologies": [
+      "Vue",
+      "Spring Boot",
+      "Docker",
+      "Java",
+      "Javascript",
+      "MySQL"
+    ],
+    "link": "https://intproj23.sit.kmutt.ac.th/kk2/",
+    "img": "../dist/1-project.png"
+  },
+  {
+    "title": "Math raining",
+    "fullDescription": "This project my part of work focused on game logic development, implementing complex algorithms to calculate and validate user responses to dynamically generated equations. The game featured a unique mechanic where equations 'rained' down, ensuring real-time interaction and immediate feedback for users. Performance optimization was crucial; I efficiently managed setInterval and setTimeout functions to reduce lag, providing a smooth gameplay experience even under heavy loads. A custom tutorial was designed to guide users through the game mechanics, incorporating interactive elements to enhance engagement and ensure a smooth learning curve for new players. Additionally, I developed and implemented logic for power-ups that spawn during gameplay, offering players various benefits while balancing them to maintain game difficulty and provide strategic advantages.",
+    "shortDescription": "The Math Raining game is an interactive educational game designed to improve players math skills through dynamic challenges.",
+    "technologies": [
+      "Vue",
+      "Javascript"
+    ],
+    "link": "https://phuttinanphak.com/mathraining/",
+    "img": "../dist/2-project.png"
+  },
+  {
+    "title": "Camp space",
+    "fullDescription": "This project involved feature listing and prioritization for a campground reservation app, collaborating with stakeholders to identify and prioritize essential features for a user-friendly experience. I developed a comprehensive feature list that balanced the needs of campground reservations and community interaction. Additionally, I focused on prototype UX/UI design, creating intuitive user interfaces to enhance the overall user experience for campers, from booking campgrounds to engaging with the camper community. Wireframes and prototypes were developed to visualize the app's design and workflow, ensuring clarity and usability throughout the design process.",
+    "shortDescription": "The Camp Space project is a mobile application UX/UI designed to enhance the camping experience by providing a platform for campers to reserve campgrounds and foster community interactions.",
+    "technologies": [
+      "Canva"
+    ],
+    "link": "https://www.canva.com/design/DAFgbYAn_Cc/gw43mMttjBemHUWiNpGW9g/view?utm_content=DAFgbYAn_Cc&utm_campaign=designshare&utm_medium=link&utm_source=viewer",
+    "img": "../dist/3-project.jpg"
+  },
+  {
+    "title": "Movie Management System",
+    "fullDescription": "This movie theater management system organizes movie scheduling, ticketing, and customer service to enhance the cinema experience. It manages comprehensive data on each movie, including title, genre, duration, screening times, and formats. The system also tracks each theater hall's details, such as seating capacity, ticket price, and specialized features for halls with digital, 3D, IMAX, and family-friendly options. Different seat types, such as Normal, VIP, and Kids, come with specific pricing to meet diverse customer needs. The ticketing feature enables efficient reservation tracking by calculating ticket prices based on movie selection, hall type, and seat choice. Customers can view available movies, seats, and prices, while theater staff can add screening times and manage movie schedules. Overall, this system aims to optimize theater management and improve the customer experience by simplifying movie selection and booking processes.",
+    "shortDescription": "This movie management system provides a centralized platform for organizing movie data, screening times, ticket prices, and reservations, making it easier for customers to select movies and seats while supporting efficient theater operations.",
+    "technologies": [
+      "MySQL"
+    ],
+    "link": "https://www.canva.com/design/DAF1eA03Jg4/RqUu_ikKFpenLkeICCfmbg/edit?utm_content=DAF1eA03Jg4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    "img": "../dist/4-project.png"
+  }
+]

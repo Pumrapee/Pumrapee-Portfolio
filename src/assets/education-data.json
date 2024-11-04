@@ -1,0 +1,14 @@
+[
+  {
+    "name": "KMUTT",
+    "description": "Bachelor of Science in Information Technology",
+    "year": "2021 - Present",
+    "img": "../dist/1-education.png"
+  },
+  {
+    "name": "Singsamut School",
+    "description": "Science-Math Program",
+    "year": "2016 - 2021",
+    "img": "../dist/2-education.gif"
+  }
+]
