@@ -3,6 +3,7 @@ import { ref } from "vue";
 import projectsData from "../assets/projects-data.json";
 const projects = ref(projectsData);
 const tools = ref([]);
+const otherTools = ["Python", "MongoDB", "Express.js", "Linux CLI"];
 
 projects.value.forEach((project) => {
   project.technologies.forEach((tech) => {
@@ -10,6 +11,12 @@ projects.value.forEach((project) => {
       tools.value.push(tech);
     }
   });
+});
+
+otherTools.forEach((tech) => {
+  if (!tools.value.includes(tech)) {
+    tools.value.push(tech);
+  }
 });
 </script>
 <template>

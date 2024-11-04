@@ -3,12 +3,12 @@
     "name": "King Mongkut's University of Technology Thonburi",
     "description": "Bachelor of Science in Information Technology",
     "year": "2021 - Present",
-    "img": "../dist/1-education.png"
+    "img": "1-education.png"
   },
   {
     "name": "Singsamut School",
     "description": "Science-Math Program",
     "year": "2016 - 2021",
-    "img": "../dist/2-education.gif"
+    "img": "2-education.gif"
   }
 ]
