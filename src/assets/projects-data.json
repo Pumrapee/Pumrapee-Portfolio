@@ -48,5 +48,23 @@
     ],
     "link": "https://www.canva.com/design/DAF1eA03Jg4/RqUu_ikKFpenLkeICCfmbg/edit?utm_content=DAF1eA03Jg4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
     "img": "4-project.png"
+  },
+  {
+    "title": "SRE Final Capstone Project",
+    "fullDescription": "This capstone focused on applying Site Reliability Engineering practices across provisioning, observability, and performance testing. I automated VM provisioning and setup with Ansible on Proxmox, then built a monitoring stack with Prometheus, Grafana, and exporters to track infrastructure and service health. I also created load testing workflows using k6 with InfluxDB and Grafana dashboards to measure throughput, latency percentiles, and error rates under flood, scalability, and spike scenarios. The project emphasized reliability through repeatable infrastructure automation, metrics-driven analysis, dashboarding, and incident-oriented monitoring runbooks.",
+    "shortDescription": "An end-to-end SRE capstone covering infrastructure automation, monitoring, and load testing with actionable reliability metrics.",
+    "technologies": [
+      "Ansible",
+      "Docker",
+      "Prometheus",
+      "Grafana",
+      "k6",
+      "InfluxDB",
+      "MySQL",
+      "Linux CLI",
+      "Git"
+    ],
+    "link": "https://www.notion.so/phuttinan/SRE-Final-Capstone-Project-Report-2ccf6a8dfd0980b489caeadef681c3a9",
+    "img": "5-project.png"
   }
 ]

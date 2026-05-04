@@ -1,5 +1,10 @@
 <script setup>
-import { defineProps } from "vue";
+import { computed, defineProps } from "vue";
+import {
+  CATEGORY_ORDER,
+  getCategoryStyle,
+  getToolCategory,
+} from "../utils/toolCategories";
 
 const props = defineProps({
   project: {
@@ -13,32 +18,59 @@ const emit = defineEmits(["open-modal"]);
 const handleShowDetails = () => {
   emit("open-modal", props.project);
 };
+
+const categorizedTechnologies = computed(() => {
+  const grouped = {};
+  CATEGORY_ORDER.forEach((category) => {
+    grouped[category] = [];
+  });
+
+  props.project.technologies.forEach((tech) => {
+    grouped[getToolCategory(tech)].push(tech);
+  });
+
+  return CATEGORY_ORDER.filter((category) => grouped[category].length > 0).map(
+    (category) => ({
+      name: category,
+      technologies: grouped[category],
+      ...getCategoryStyle(category),
+    })
+  );
+});
 </script>
 
 <template>
-  <div class="bg-white shadow-lg rounded-lg p-6 hover-effect">
-    <h3 class="text-xl font-semibold">{{ project.title }}</h3>
-    <p class="mt-2 text-gray-700">{{ project.shortDescription }}</p>
-    <ul class="flex flex-wrap mt-4">
-      <li
-        v-for="tech in project.technologies"
-        :key="tech"
-        class="text-sm bg-gray-200 px-2 py-1 rounded mr-1 mb-1"
-      >
-        {{ tech }}
-      </li>
-    </ul>
-    <div class="flex space-x-4">
+  <div class="h-full rounded-lg p-6 hover-effect border border-slate-700 bg-slate-900/80 flex flex-col">
+    <h3 class="text-xl font-semibold text-slate-100">{{ project.title }}</h3>
+    <p class="mt-2 text-slate-300">{{ project.shortDescription }}</p>
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div v-for="group in categorizedTechnologies" :key="group.name">
+        <p class="text-[10px] uppercase tracking-wider mb-1" :class="group.heading">
+          {{ group.name }}
+        </p>
+        <ul class="flex flex-wrap gap-1">
+          <li
+            v-for="tech in group.technologies"
+            :key="tech"
+            class="text-xs border px-2 py-1 rounded"
+            :class="group.badge"
+          >
+            {{ tech }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-auto pt-6 flex space-x-4">
       <a
         :href="project.link"
         target="_blank"
-        class="mt-4 inline-block text-blue-500 hover:underline"
+        class="inline-block text-cyan-300 hover:text-cyan-200"
       >
         View Project
       </a>
       <button
         @click="handleShowDetails"
-        class="mt-4 inline-block text-blue-500 hover:underline"
+        class="inline-block text-cyan-300 hover:text-cyan-200"
       >
         Show Details
       </button>
@@ -48,11 +80,11 @@ const handleShowDetails = () => {
 
 <style scoped>
 .hover-effect {
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, border-color 0.3s;
 }
 .hover-effect:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  border-color: rgba(103, 232, 249, 0.5);
 }
 
 li {

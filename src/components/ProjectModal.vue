@@ -1,5 +1,4 @@
 <script setup>
-import Projects from "@/views/Projects.vue";
 import { defineProps } from "vue";
 
 const props = defineProps({
@@ -23,22 +22,22 @@ const closeModal = () => {
   <teleport to="body">
     <div
       v-if="isOpen"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      class="fixed inset-0 bg-slate-950/80 flex items-center justify-center z-50 px-4"
     >
-      <div class="bg-white rounded-lg shadow-lg p-6 modal-content relative">
+      <div class="rounded-lg border border-cyan-400/30 bg-slate-900 shadow-lg p-6 modal-content relative">
         <button
           @click="closeModal"
-          class="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+          class="absolute top-2 right-3 text-slate-400 hover:text-cyan-300 text-xl"
         >
           &times;
         </button>
-        <h3 class="text-xl font-semibold mb-4">{{ project.title }}</h3>
+        <h3 class="text-xl font-semibold mb-4 text-cyan-300">{{ project.title }}</h3>
         <img
           :src="project.img"
           alt="Project Image"
-          class="modal-image mb-4 rounded-lg"
+          class="modal-image mb-4 rounded-lg border border-slate-700"
         />
-        <p class="text-gray-700">{{ project.fullDescription }}</p>
+        <p class="text-slate-300">{{ project.fullDescription }}</p>
       </div>
     </div>
   </teleport>
@@ -46,10 +45,10 @@ const closeModal = () => {
 
 <style scoped>
 .modal-content {
-  max-height: 80vh; /* Maximum height of the modal */
-  max-width: 60%; /* Optional: set a maximum width */
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding-right: 1rem; /* Add padding for scrollbar visibility */
+  max-height: 80vh;
+  max-width: 60%;
+  overflow-y: auto;
+  padding-right: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -68,6 +67,6 @@ const closeModal = () => {
 
 .modal-image {
   width: 100%;
-  height: auto; /* Maintain aspect ratio of the image */
+  height: auto;
 }
 </style>
